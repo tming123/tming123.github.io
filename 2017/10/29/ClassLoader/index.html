@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Quick StartCreate a new post1$ hexo new &quot;My New Post&quot; More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$">
+<meta name="description" content="众所周知的是，ClassLoader负责将Class加载到JVM中。除此之外还有审查每个类应该由谁来加载的功能，最后是将Class字节码重新解析成JVM统一要求的对象格式。   ClassLoader的等级加载制度 先判断自己是否加载过，如果加载过就会拒绝服务，如果没有接待过就会向上询问是否被更高一级接待过 上级会根据自己的接待原则检查这个会员是否被接待过，如果接待过就会拒绝再次接待，同时将已经">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Initial Hexo">
-<meta property="og:url" content="http://yoursite.com/2017/10/28/Initial Hexo/index.html">
+<meta property="og:title" content="ClassLoader">
+<meta property="og:url" content="http://yoursite.com/2017/10/29/ClassLoader/index.html">
 <meta property="og:site_name" content="tming&#39;s blog">
-<meta property="og:description" content="Quick StartCreate a new post1$ hexo new &quot;My New Post&quot; More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$">
+<meta property="og:description" content="众所周知的是，ClassLoader负责将Class加载到JVM中。除此之外还有审查每个类应该由谁来加载的功能，最后是将Class字节码重新解析成JVM统一要求的对象格式。   ClassLoader的等级加载制度 先判断自己是否加载过，如果加载过就会拒绝服务，如果没有接待过就会向上询问是否被更高一级接待过 上级会根据自己的接待原则检查这个会员是否被接待过，如果接待过就会拒绝再次接待，同时将已经">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-28T11:08:12.000Z">
+<meta property="og:updated_time" content="2018-10-30T13:12:42.201Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Initial Hexo">
-<meta name="twitter:description" content="Quick StartCreate a new post1$ hexo new &quot;My New Post&quot; More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$">
+<meta name="twitter:title" content="ClassLoader">
+<meta name="twitter:description" content="众所周知的是，ClassLoader负责将Class加载到JVM中。除此之外还有审查每个类应该由谁来加载的功能，最后是将Class字节码重新解析成JVM统一要求的对象格式。   ClassLoader的等级加载制度 先判断自己是否加载过，如果加载过就会拒绝服务，如果没有接待过就会向上询问是否被更高一级接待过 上级会根据自己的接待原则检查这个会员是否被接待过，如果接待过就会拒绝再次接待，同时将已经">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/28/Initial Hexo/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/29/ClassLoader/"/>
 
 
 
 
 
-  <title>Initial Hexo | tming's blog</title>
+  <title>ClassLoader | tming's blog</title>
   
 
 
@@ -232,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/28/Initial Hexo/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/29/ClassLoader/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tming">
@@ -249,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Initial Hexo</h1>
+          <h1 class="post-title" itemprop="name headline">ClassLoader</h1>
         
 
         <div class="post-meta">
@@ -261,8 +262,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-28T16:54:49+08:00">
-                2017-10-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-29T16:06:12+08:00">
+                2017-10-29
               </time>
             
 
@@ -299,14 +300,43 @@
       
 
       
-        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <blockquote>
+<p>众所周知的是，ClassLoader负责将Class加载到JVM中。除此之外还有审查每个类应该由谁来加载的功能，最后是将Class字节码重新解析成JVM统一要求的对象格式。</p>
+</blockquote>
+<hr>
+<h3 id="ClassLoader的等级加载制度"><a href="#ClassLoader的等级加载制度" class="headerlink" title="ClassLoader的等级加载制度"></a>ClassLoader的等级加载制度</h3><ol>
+<li>先判断自己是否加载过，如果加载过就会拒绝服务，如果没有接待过就会向上询问是否被更高一级接待过</li>
+<li>上级会根据自己的接待原则检查这个会员是否被接待过，如果接待过就会拒绝再次接待，同时将已经接待过的结果反馈给下一级；如果没有接待过的话就会再向更高一级的询问.更高一级也是同样的处理办法。直到有一级接待或者告诉下一级这个会员不是自己接待。</li>
+</ol>
+<h3 id="三种ClassLoader"><a href="#三种ClassLoader" class="headerlink" title="三种ClassLoader"></a>三种ClassLoader</h3><ul>
+<li><strong>Bootstrap ClassLoader 启动类加载器</strong> :这个加载器就是为接待室自己本身服务的。他是JVM系统控制的，仅仅是系统类的加载工具而已</li>
+<li><strong>ExtClassLoader 标准扩展类加载器</strong> :是JVM本身的一部分，可是又不是JVM亲自实现的，也和普通的外部会员不同</li>
+<li><strong>AppClassLoader 系统类加载器</strong> :专门为会员服务的</li>
+</ul>
+<h3 id="JVM加载class文件到内存中的方式"><a href="#JVM加载class文件到内存中的方式" class="headerlink" title="JVM加载class文件到内存中的方式"></a>JVM加载class文件到内存中的方式</h3><ul>
+<li><strong>隐式加载</strong>：不通过代码里调用而是通过JVM来自动加载需要的类到内存的方式。例如继承某个类的时候，JVM会解析当前这个类时发现引用的类 不在内存中就会自动的将这些类加载到内存中。</li>
+<li><strong>显示加载</strong>：在代码中通过调用ClassLoader类来加载一个类的方式。<br><code>this.getClass.getClassLoader.loadClass().Class.forName();</code></li>
+</ul>
+<h3 id="如何加载class文件"><a href="#如何加载class文件" class="headerlink" title="如何加载class文件"></a>如何加载class文件</h3><ol>
+<li><strong>加载</strong>：实现抽象类ClassLoader中的findClass方法去找到.class文件并把这个文件包含的字节码加载到内存中，再调用defineClass方法来创建类对象</li>
+<li><strong>验证</strong>：字节码验证，确保符合JVM规范</li>
+<li><strong>准备</strong>：准备代表每个类中定义的字段，方法和实现接口所必需的数据结构</li>
+<li><strong>解析</strong>：类装入器就会装入所引用的其他所有类</li>
+<li><strong>初始化</strong>：类中的静态属性和初始化赋值以及静态块的执行</li>
+</ol>
+<h3 id="JVM的作用"><a href="#JVM的作用" class="headerlink" title="JVM的作用"></a>JVM的作用</h3><p>JVM能够跨计算机体系结构执行java字节码主要是由于JVM屏蔽了与各个计算机平台xiang关的软件或者硬件之间的差异，使得与平台相关的耦合统一有JVM提供者来实现。</p>
+<h3 id="指令集与汇编语言"><a href="#指令集与汇编语言" class="headerlink" title="指令集与汇编语言"></a>指令集与汇编语言</h3><p>指令集就是可以直接被机器识别的机器码，也就是它必须是以二进制格式存在与计算机中的，而汇编语言是能够被人识别的指令，汇编语言就是为了能让人能够更容易地记住机器指令而使用的助记符。</p>
+<h3 id="JVM与实体机有什么不同"><a href="#JVM与实体机有什么不同" class="headerlink" title="JVM与实体机有什么不同"></a>JVM与实体机有什么不同</h3><ul>
+<li><strong>一个抽象规范</strong>：这个规范约束了JVM到底是什么？它的组成成分</li>
+<li><strong>一个具体的实现</strong>：就是不同的厂商按照这个抽象的规范用软件在不同平台上的具体的实现</li>
+<li><strong>一个运行中的实例</strong>：当运行一个Java程序的时候，它就是一个JVM实例</li>
+</ul>
+<h3 id="JVM体系结构详解"><a href="#JVM体系结构详解" class="headerlink" title="JVM体系结构详解"></a>JVM体系结构详解</h3><ul>
+<li><strong>类加载器</strong>：在启动的时候会将class文件加载到内存中</li>
+<li><strong>执行引擎</strong>：相当于CPU，负责执行class文件中包含的字节码指令</li>
+<li><strong>内存区</strong>：模拟计算机中的存储，记录和调度模块</li>
+<li><strong>本地方法区</strong>：调用C/C++实现的本地方法的代码返回结果</li>
+</ul>
 
       
     </div>
@@ -322,6 +352,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
 
       
       
@@ -331,14 +367,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/10/28/为什么匿名内部类参数必须是final类型/" rel="next" title="为什么匿名内部类参数必须是final类型">
+                <i class="fa fa-chevron-left"></i> 为什么匿名内部类参数必须是final类型
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/28/为什么匿名内部类参数必须是final类型/" rel="prev" title="为什么匿名内部类参数必须是final类型">
-                为什么匿名内部类参数必须是final类型 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/14/RecyclerView点击项目滑动到中央/" rel="prev" title="RecyclerView定位，点击项自动滑动到中央">
+                RecyclerView定位，点击项自动滑动到中央 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -468,7 +508,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ClassLoader的等级加载制度"><span class="nav-number">1.</span> <span class="nav-text">ClassLoader的等级加载制度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种ClassLoader"><span class="nav-number">2.</span> <span class="nav-text">三种ClassLoader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM加载class文件到内存中的方式"><span class="nav-number">3.</span> <span class="nav-text">JVM加载class文件到内存中的方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何加载class文件"><span class="nav-number">4.</span> <span class="nav-text">如何加载class文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM的作用"><span class="nav-number">5.</span> <span class="nav-text">JVM的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指令集与汇编语言"><span class="nav-number">6.</span> <span class="nav-text">指令集与汇编语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM与实体机有什么不同"><span class="nav-number">7.</span> <span class="nav-text">JVM与实体机有什么不同</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM体系结构详解"><span class="nav-number">8.</span> <span class="nav-text">JVM体系结构详解</span></a></li></ol></div>
             
 
           </div>
